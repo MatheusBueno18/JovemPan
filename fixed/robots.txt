@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# ================================================================
+# ATENÇÃO — SITEMAP: confirme a URL correta abaixo.
+# Se o site está na raiz: https://jovempanitapeva.com.br/sitemap.xml
+# Se está em subpasta:    https://jovempanitapeva.com.br/itapeva/sitemap.xml
+# ================================================================
+Sitemap: https://jovempanitapeva.com.br/sitemap.xml

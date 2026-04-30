@@ -1,0 +1,34 @@
+[
+  {
+    "isMain": true,
+    "title": "Jovem Pan Itapeva completa mais um ano no ar com programação especial",
+    "category": "Institucional",
+    "resume": "A rádio celebra mais um aniversário com cobertura ao vivo, entrevistas exclusivas com personalidades locais e muitas surpresas para os ouvintes da região.",
+    "image": "img/podcast1.webp",
+    "link": "#"
+  },
+  {
+    "isMain": false,
+    "title": "Pânico bate recorde de audiência no interior de SP",
+    "category": "Audiência",
+    "resume": "",
+    "image": "img/podcast2.webp",
+    "link": "#"
+  },
+  {
+    "isMain": false,
+    "title": "Morning Show traz debate sobre economia regional",
+    "category": "Notícias",
+    "resume": "",
+    "image": "img/podcast3.webp",
+    "link": "#"
+  },
+  {
+    "isMain": false,
+    "title": "Promoção Missão Impossível sorteia prêmios em Itapeva",
+    "category": "Promoções",
+    "resume": "",
+    "image": "img/JP.png",
+    "link": "#"
+  }
+]

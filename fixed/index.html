@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jovem Pan Itapeva 91.7 FM. A rádio do Brasil. Ouça ao vivo, confira as últimas notícias, podcasts e promoções exclusivas.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#000000">
+    <!-- SEO local — ajuda no ranqueamento para buscas em Itapeva e região -->
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Itapeva, São Paulo, Brasil">
+    <meta name="geo.position" content="-23.9814;-48.8756">
+    <meta name="ICBM" content="-23.9814, -48.8756">
+    <!-- ================================================================
+         ATENÇÃO — URL CANÔNICA: confirme o endereço real do seu site.
+         Se o site está na RAIZ do domínio, use:
+           <link rel="canonical" href="https://jovempanitapeva.com.br/">
+         Se está em uma subpasta /itapeva, mantenha como está abaixo.
+         URL incorreta prejudica o SEO e pode causar conteúdo duplicado.
+    ================================================================ -->
+    <!--<link rel="canonical" href="https://jovempanitapeva.com.br/itapeva"> -->
+
+    <title>Jovem Pan Itapeva 91.7 FM | A Rádio do Brasil</title>
+
+    <link rel="icon" type="image/png" href="img/JP.png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jovem Pan Itapeva 91.7 FM | A Rádio do Brasil">
+    <meta property="og:description"
+        content="Ouça ao vivo, confira as últimas notícias, podcasts e promoções exclusivas da Jovem Pan Itapeva.">
+    <meta property="og:image" content="https://jovempanitapeva.com.br/img/JP.png">
+    <!-- Mesma observação da canônica acima: confirme se a URL está correta -->
+    <meta property="og:url" content="https://jovempanitapeva.com.br/itapeva">
+    <meta property="og:type" content="website">
+
+    <!-- CORREÇÃO: Twitter Card adicionado -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jovem Pan Itapeva 91.7 FM | A Rádio do Brasil">
+    <meta name="twitter:description"
+        content="Ouça ao vivo, confira as últimas notícias, podcasts e promoções exclusivas da Jovem Pan Itapeva.">
+    <meta name="twitter:image" content="https://jovempanitapeva.com.br/img/JP.png">
+
+    <!-- CORREÇÃO: preload da fonte principal para evitar FOUT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org RadioStation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RadioStation",
+      "name": "Jovem Pan Itapeva 91.7 FM",
+      "url": "https://jovempanitapeva.com.br/itapeva",
+      "broadcastFrequency": "91.7 FM",
+      "areaServed": "Itapeva, SP",
+      "telephone": "+55-15-99620-6127",
+      "email": "comercial@fmcristal.com.br"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- CORREÇÃO: src do audio sem token JWT expirado — URL permanente do Zeno.fm -->
+    <audio id="radio-stream" preload="none"></audio>
+
+    <header id="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>
+                        <span class="sr-only">Jovem Pan Itapeva</span>
+                        <img src="img/JP.png" alt="Logo Jovem Pan Itapeva 91.7 FM" class="logo-img" loading="eager"
+                            fetchpriority="high">
+                    </h1>
+                </a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Abrir ou fechar menu" aria-expanded="false"
+                aria-controls="main-nav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="#hero-live">Início</a></li>
+                    <li><a href="#news-grid">Notícias</a></li>
+                    <li><a href="#equipe">Equipe Pan</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/panitapeva/" aria-label="Siga-nos no Instagram" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@grupocristaldecomunicacao" aria-label="Inscreva-se no YouTube"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/5515996206127?text=Oi%20Pan!" aria-label="Fale conosco no WhatsApp"
+                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+                <button class="btn-listen-now" id="btn-header-play" aria-label="Ouvir a rádio ao vivo">
+                    <i class="fa-solid fa-broadcast-tower"></i> AO VIVO
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-live">
+            <!-- ============================================================
+                 ATENÇÃO — VÍDEO DE FUNDO:
+                 Coloque o arquivo de vídeo do estúdio em: video/bg-estudio.mp4
+                 Enquanto o arquivo não existir, o hero exibe o poster estático.
+                 Formato recomendado: MP4 H.264, resolução 1280×720, ~5–10 MB.
+                 ============================================================ -->
+            <video autoplay loop muted playsinline class="hero-bg-video" poster="img/podcast1.webp">
+                <source src="video/bg-estudio.mp4" type="video/mp4">
+                <!-- Sem o arquivo acima, apenas o poster é exibido — comportamento correto -->
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="live-container relative-z">
+                <div class="live-badge">
+                    <span class="dot"></span> NO AR AGORA
+                </div>
+                <!-- CORREÇÃO: h2 → h2 mantido (hierarquia corrigida no h1 do logo) -->
+                <h2>Jovem Pan - Itapeva</h2>
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FPanItapeva%2Fvideos%2F3092441517561192&show_text=0&width=560"
+                        width="900" height="505" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
+                <div class="hero-btns">
+                    <button class="btn-primary" id="hero-play-trigger">OUVIR AGORA</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="news-grid" class="section-container">
+            <h2 class="section-title">Últimas Notícias</h2>
+            <div class="grid-container" id="dynamic-news-container">
+                <div class="loading-spinner">Carregando notícias da Pan...</div>
+            </div>
+        </section>
+
+        <section id="programacao" class="section-container">
+            <div class="section-header section-header-center">
+                <h2 class="section-title-main">Nossa Programação</h2>
+                <p>Os maiores sucessos e os melhores debates do rádio brasileiro.</p>
+            </div>
+
+            <article class="highlight-show">
+                <div class="highlight-content">
+                    <span class="badge">Ao Vivo às 12h</span>
+                    <h3>Pânico</h3>
+                    <p>O programa mais irreverente do rádio! Entrevistas exclusivas, humor inteligente e muito debate
+                        com a equipe que você já conhece. Não perca nenhum detalhe.</p>
+                    <!-- CORREÇÃO: listener adicionado no JS para este botão -->
+                    <button class="btn-play-show" id="btn-play-show">
+                        <i class="fa-solid fa-play"></i> Ouvir Agora
+                    </button>
+                </div>
+                <div class="highlight-image highlight-image-pan" role="img" aria-label="Equipe do Programa Pânico">
+                </div>
+            </article>
+
+            <div class="schedule-grid" id="programacao-grid">
+                <div class="schedule-card" data-start="06:00" data-end="07:00">
+                    <time class="time" datetime="06:00">06:00 - 07:00</time>
+                    <h4>Jornal da Manhã</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="10:00" data-end="11:30">
+                    <time class="time" datetime="10:00">10:00 - 11:30</time>
+                    <h4>Morning Show</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="11:30" data-end="12:00">
+                    <time class="time" datetime="11:30">11:30 - 12:00</time>
+                    <h4>Rock'n Pop</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="12:00" data-end="14:00">
+                    <time class="time" datetime="12:00">12:00 - 14:00</time>
+                    <h4>Pânico</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="14:00" data-end="15:00">
+                    <time class="time" datetime="14:00">14:00 - 15:00</time>
+                    <h4>Planeta DJ</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="15:00" data-end="17:00">
+                    <time class="time" datetime="15:00">15:00 - 17:00</time>
+                    <h4>Missão Impossível</h4>
+                    <p>Rede</p>
+                </div>
+
+                <div class="schedule-card" data-start="18:00" data-end="20:00">
+                    <time class="time" datetime="18:00">18:00 - 20:00</time>
+                    <h4>Os Pingos Nos Is</h4>
+                    <p>Rede</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container banner-section">
+            <div class="banner-ad" aria-label="Espaço Publicitário">
+                <!-- ================================================================
+                     ATENÇÃO — BANNER PUBLICITÁRIO: preencha os 3 campos abaixo.
+
+                     1. href: URL do site do anunciante
+                        Ex: https://www.nomeDaEmpresa.com.br
+
+                     2. srcset (mobile, max 768px): imagem para celular — 600×500 px
+                        Ex: img/banner-anunciante-mobile.jpg
+
+                     3. src (desktop): imagem para desktop — 1200×200 px
+                        Ex: img/banner-anunciante-desktop.jpg
+
+                     Enquanto não houver anunciante, você pode ocultar esta seção
+                     inteira adicionando style="display:none" na tag <section> acima.
+                ================================================================ -->
+                <a href="https://LINK-DO-ANUNCIANTE-AQUI.com.br" target="_blank" rel="noopener noreferrer">
+                    <picture>
+                        <source media="(max-width: 768px)"
+                            srcset="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&h=500&q=80">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&h=200&q=80"
+                            alt="Banner Publicitário: Anuncie com a Jovem Pan" loading="lazy"
+                            class="banner-img-desktop">
+                    </picture>
+                </a>
+                <span class="ad-label">Publicidade</span>
+            </div>
+        </section>
+
+        <section id="podcasts" class="section-container dark-bg podcasts-section">
+            <div class="section-header podcasts-header">
+                <div>
+                    <h2 class="section-title text-white">Cortes da Pan</h2>
+                    <p class="section-subtitle">Os melhores momentos da programação</p>
+                </div>
+                <!-- CORREÇÃO: classe btn-small definida no CSS -->
+                <a href="https://www.youtube.com/@grupocristaldecomunicacao" target="_blank" rel="noopener noreferrer"
+                    class="btn-primary btn-small">
+                    <i class="fa-brands fa-youtube"></i> Ver Canal
+                </a>
+            </div>
+
+            <!-- CORREÇÃO: iframes substituídos por fachadas (lite embeds) para melhor performance -->
+            <div class="video-grid">
+                <div class="yt-video-card">
+                    <div class="iframe-container">
+                        <a class="yt-facade" href="https://www.youtube.com/watch?v=w50gucQyodo" target="_blank"
+                            rel="noopener noreferrer" data-videoid="w50gucQyodo"
+                            aria-label="Assistir: Case De Sucesso - Paulo Kawamura (Grupo 4K)">
+                            <img src="https://i.ytimg.com/vi/w50gucQyodo/hqdefault.jpg"
+                                alt="Case De Sucesso - Paulo Kawamura (Grupo 4K)" loading="lazy">
+                            <span class="yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+                        </a>
+                    </div>
+                    <h4>Case De Sucesso - Paulo Kawamura (Grupo 4K)</h4>
+                </div>
+                <div class="yt-video-card">
+                    <div class="iframe-container">
+                        <a class="yt-facade" href="https://www.youtube.com/watch?v=qgoZ1l2V1iI" target="_blank"
+                            rel="noopener noreferrer" data-videoid="qgoZ1l2V1iI"
+                            aria-label="Assistir: Cristal cast - João Fadel fala sobre gestão de Itararé">
+                            <img src="https://i.ytimg.com/vi/qgoZ1l2V1iI/hqdefault.jpg"
+                                alt="Cristal cast - João Fadel fala sobre gestão de Itararé" loading="lazy">
+                            <span class="yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+                        </a>
+                    </div>
+                    <h4>Cristal cast - João Fadel fala sobre gestão de Itararé</h4>
+                </div>
+                <div class="yt-video-card">
+                    <div class="iframe-container">
+                        <a class="yt-facade" href="https://www.youtube.com/watch?v=gqpK2K7RWRk" target="_blank"
+                            rel="noopener noreferrer" data-videoid="gqpK2K7RWRk"
+                            aria-label="Assistir: Cristal Notícias - Terezinha da Paulina e outros">
+                            <img src="https://i.ytimg.com/vi/gqpK2K7RWRk/hqdefault.jpg"
+                                alt="Cristal Notícias - Terezinha da Paulina, Paulinho da Agrovila, Chico Feitosa e Diego Teixeira"
+                                loading="lazy">
+                            <span class="yt-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+                        </a>
+                    </div>
+                    <h4>Cristal Notícias - Terezinha da Paulina, Paulinho da Agrovila, Chico Feitosa e Diego Teixeira
+                    </h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe" class="section-container dark-bg">
+            <h2 class="section-title text-white">Quem faz a Pan</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <!-- CORREÇÃO: imagem existente no projeto -->
+                        <img src="img/IMG_20240122_191208_677.jpg.jpeg" alt="Locutor Lima Júnior" loading="lazy">
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/limajrlocutor/"
+                                aria-label="Abrir Instagram de Lima Júnior" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Lima Júnior</h4>
+                        <p>Jornal da Manhã</p>
+                    </div>
+                </div>
+
+                <!-- CORREÇÃO: imagens substituídas por fotos existentes no projeto -->
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="img/IMG_20260119_192905_411.jpg.jpeg" alt="Locutora Mariana Silva" loading="lazy">
+                        <div class="team-social">
+                            <!-- =====================================================
+                                 ATENÇÃO — PREENCHER: substitua o href abaixo pelo
+                                 perfil real do Instagram de Mariana Silva.
+                                 Exemplo: https://www.instagram.com/SEU_PERFIL_AQUI/
+                                 ===================================================== -->
+                            <a href="https://www.instagram.com/" aria-label="Abrir Instagram de Mariana Silva"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Mariana Silva</h4>
+                        <p>As Mais Pedidas</p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="img/podcast1.webp" alt="Locutor Beto Pan" loading="lazy">
+                        <div class="team-social">
+                            <!-- =====================================================
+                                 ATENÇÃO — PREENCHER: substitua o href abaixo pelo
+                                 perfil real do Instagram de Beto "Pan".
+                                 Exemplo: https://www.instagram.com/SEU_PERFIL_AQUI/
+                                 ===================================================== -->
+                            <a href="https://www.instagram.com/" aria-label="Abrir Instagram de Beto Pan"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Beto "Pan"</h4>
+                        <p>Tardes Jovem Pan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promocoes" class="section-container vibrant-bg">
+            <h2 class="section-title text-white">Promoções e Sorteios</h2>
+            <div class="promo-grid">
+                <article class="promo-card">
+                    <div class="promo-image promo-image-show"></div>
+                    <div class="promo-info">
+                        <h4>Ingressos VIP - Show Nacional</h4>
+                        <p>Concorra a pares de ingressos para o maior show do ano na arena local.</p>
+                        <!-- CORREÇÃO: tag <a> de abertura estava ausente -->
+                        <a class="btn-participate" href="https://wa.me/5515996206127?text=Quero+participar+da+promo+VIP"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i> Participar
+                        </a>
+                    </div>
+                </article>
+
+                <article class="promo-card">
+                    <div class="promo-image promo-image-kit"></div>
+                    <div class="promo-info">
+                        <h4>Sorteio Kit Jovem Pan</h4>
+                        <p>Fique no estilo com o kit exclusivo: camiseta, caneca e adesivos oficiais.</p>
+                        <!-- CORREÇÃO: tag <a> de abertura estava ausente -->
+                        <a class="btn-participate" href="https://wa.me/5515996206127?text=Quero+o+kit+Pan"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i> Participar
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- CORREÇÃO: tag <a> de abertura estava ausente no botão flutuante -->
+    <a class="floating-whatsapp" href="https://wa.me/5515996206127" target="_blank" rel="noopener noreferrer"
+        aria-label="Pedir música pelo WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="tooltip">Pedir Música!</span>
+    </a>
+
+    <div class="footer-spacer"></div>
+
+    <aside id="radio-player" aria-label="Player da Rádio">
+        <div class="player-container">
+            <div class="player-controls">
+                <button id="play-pause-btn" aria-label="Reproduzir ou pausar a rádio" aria-pressed="false">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+
+            <div class="player-info">
+                <div class="now-playing-header">
+                    <span class="now-playing-label" id="player-status-label" aria-live="polite">PAUSADO</span>
+                    <div class="audio-visualizer paused" id="visualizer" aria-hidden="true">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <span class="now-playing-track">Jovem Pan Itapeva - 91.7 FM</span>
+            </div>
+
+            <div class="player-volume">
+                <i class="fa-solid fa-volume-high" id="volume-icon"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="80" aria-label="Controle de volume">
+            </div>
+        </div>
+    </aside>
+
+    <footer id="main-footer" class="dark-bg">
+        <div class="section-container footer-grid">
+            <div class="footer-about">
+                <img src="img/JP.png" alt="Logo Jovem Pan" class="footer-logo">
+                <p>A rádio número 1 do Brasil em Itapeva e região. Informação, música e entretenimento 24 horas por dia.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/panitapeva/" aria-label="Instagram" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@grupocristaldecomunicacao" aria-label="YouTube" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero-live">Início</a></li>
+                    <li><a href="#news-grid">Notícias</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#promocoes">Promoções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Fale com a Pan</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Itapeva - SP</p>
+                <p><i class="fa-solid fa-phone"></i> (15) 99620-6127</p>
+                <p><i class="fa-solid fa-envelope"></i> comercial@fmcristal.com.br</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Jovem Pan Itapeva 91.7 FM. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

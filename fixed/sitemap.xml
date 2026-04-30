@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ATENÇÃO — SITEMAP:
+    Confirme a URL base abaixo antes de publicar.
+    Se o site está na raiz: https://jovempanitapeva.com.br/
+    Se está em subpasta:    https://jovempanitapeva.com.br/itapeva/
+
+    Atualize a data <lastmod> sempre que publicar mudanças significativas.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://jovempanitapeva.com.br/itapeva/</loc>
+        <lastmod>2026-04-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+</urlset>
